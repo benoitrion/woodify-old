@@ -8,8 +8,9 @@
     "build": "next build",
     "start": "next start -p %PORT%",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-commit": "eslint **/*.js"
+    "lint": "eslint **/*.js --ignore-pattern .gitignore"
   },
+  "pre-commit": [ "lint" ],
   "keywords": [],
   "author": "",
   "license": "ISC",

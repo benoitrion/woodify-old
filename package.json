@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start -p %PORT%",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "eslint --fix"
+    "pre-commit": "eslint **/*.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "next": "^8.0.3",
     "now": "^14.2.3",
     "now-cli": "^0.0.0",
+    "pre-commit": "^1.2.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-markdown": "^4.0.6"

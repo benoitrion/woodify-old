@@ -1,0 +1,32 @@
+{
+  "name": "woodify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start -p %PORT%",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^8.0.3",
+    "now": "^14.2.3",
+    "now-cli": "^0.0.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-markdown": "^4.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}

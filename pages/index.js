@@ -1,40 +1,25 @@
+import React from 'react';
 import Layout from '../components/Layout.js'
-import Link from 'next/link'
+import ParcelList from '../components/ParcelList.js'
 import getParcels from '../parcel-data'
+import { withStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import GridCardNumber from '../components/GridCardNumber.js'
 
-const CommonDetails = ({ parcels }) => (
-  parcels.reduce((a, b) => (
-    <ul>
-      <li>{a.area + b.area}</li>
-      <li>{a.revenues + b.revenues}</li>
-      <li>{a.expenses + b.expenses}</li>
-    </ul>
-  ))
-)
+const styles = ({
+});
 
-const ParcelLink = ({ parcel }) => (
-  <li>
-    <Link as={`/p/${parcel.id}`} href={`/parcel?title=${parcel.title}`}>
-      <a>{parcel.title}</a>
-    </Link>
-  </li>
-)
-
-const ParcelList = ({ parcels }) => (
-  <ul>
-    {parcels.map(parcel => (
-      <ParcelLink key={parcel.id} parcel={parcel} />
-    ))}
-  </ul>
-)
-
-const Index = (props) => (
-  <Layout>
-    <h1>Woodify</h1>
-    <CommonDetails parcels={props.parcels} />
-    <ParcelList parcels={props.parcels} />
-  </Layout>
-)
+const Index = (props) => {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Layout >
+        <GridCardNumber parcels={props.parcels} />
+        <ParcelList parcels={props.parcels} />
+      </Layout>
+    </React.Fragment>
+  )
+}
 
 Index.getInitialProps = async function () {
   return {
@@ -42,4 +27,4 @@ Index.getInitialProps = async function () {
   }
 }
 
-export default Index
+export default withStyles(styles)(Index);

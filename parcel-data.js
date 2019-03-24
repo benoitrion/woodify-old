@@ -3,7 +3,8 @@ function getParcels() {
     return [
         { 
             id: 'haut-courroi-A834', 
-            title: 'SAINT-VINCENT "Haut du Corroi" - A834', 
+            title: 'SAINT-VINCENT "Haut du Corroi" - A834',
+            date: '20110510', 
             cadastralNb: 'A834', 
             type:'Bois', 
             seller:'FORGET-CRELOT', 
@@ -28,6 +29,7 @@ function getParcels() {
         { 
             id: 'au-chenois-E834B7', 
             title: 'SAINT-VINCENT "Au Chenois" - E834B7', 
+            date: '20101103', 
             cadastralNb: 'E834B7', 
             type:'Bois', 
             seller:'DEBRAY Christiane', 

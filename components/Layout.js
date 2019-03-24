@@ -1,18 +1,28 @@
 import Header from './Header'
-import Footer from './Footer'
+import { withStyles } from '@material-ui/core/styles';
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+const backgroundImgUrl = 'static/images/background_trees.jpg';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.grey['100'],
+    overflow: 'hidden',
+    background: `url(${backgroundImgUrl}) no-repeat`,
+    backgroundSize: 'cover',
+    backgroundPosition: '0 400px',
+    paddingBottom: 200
+  }
+});
+
+const Layout = props => {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <Header />
+      {props.children}
+    </div>
+  )
 }
 
-const Layout = props => (
-  <div style={layoutStyle}>
-    <Header />
-    {props.children}
-    <Footer />
-  </div>
-)
-
-export default Layout
+export default withStyles(styles)(Layout);

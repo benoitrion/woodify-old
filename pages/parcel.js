@@ -1,39 +1,26 @@
 import Layout from '../components/Layout.js'
 import getParcels from '../parcel-data'
+import ParcelDetails from '../components/ParcelDetails'
+import ParcelSellingDetails from '../components/ParcelSellingDetails'
+import ParcelTasks from '../components/ParcelTasks'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from '@material-ui/core/styles';
 
-const ParcelDetails = ({ parcel }) => (
-    <ul>
-      <li>{parcel.area}</li>
-      <li>{parcel.type}</li>
-      <li>{parcel.expenses}</li>
-      <li>{parcel.revenues}</li>
-      <li>N/A</li>
-    </ul>
-)
-const ParcelSellingDetails = ({ parcel }) => (
-  <ul>
-    <li>{parcel.seller}</li>
-    <li>{parcel.price}</li>
-    <li>{parcel.notaryFees}</li>
-  </ul>
-)
-const ParcelTasks = ({ parcel }) => (
-  <ul>
-    {parcel.tasks.map(task => (
-      <li key={task.id} >{task.description} on the {task.date} </li>
-    ))}
-  </ul>
-)
+const styles = ({
+});
+
 const Parcel = props => (
-  <Layout>
-    <h1>{props.parcel.title}</h1>
-    <ParcelDetails parcel={props.parcel} />
-    <ParcelSellingDetails parcel={props.parcel} />
-    <ParcelTasks parcel={props.parcel} />
-  </Layout>
+  <React.Fragment>
+    <CssBaseline />
+    <Layout >
+      <ParcelDetails parcel={props.parcel} />
+      <ParcelSellingDetails parcel={props.parcel} />
+      <ParcelTasks parcel={props.parcel} />
+    </Layout>
+  </React.Fragment>
 )
 
-Parcel.getInitialProps = async function(context) {
+Parcel.getInitialProps = async function (context) {
   const { id } = context.query
   const filteredParcels = await getParcels().filter(p => p.id === id)
   const parcel = filteredParcels[0];
@@ -41,7 +28,7 @@ Parcel.getInitialProps = async function(context) {
   console.log(`Fetched parcel: ${parcel.title}`)
 
   return { parcel }
-  
+
 }
 
-export default Parcel
+export default withStyles(styles)(Parcel);

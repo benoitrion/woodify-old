@@ -114,6 +114,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var assert__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! assert */ "assert");
+/* harmony import */ var assert__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(assert__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -135,9 +138,12 @@ var styles = function styles(theme) {
   };
 };
 
-function showTwoDecimalUtil(value) {
-  console.log(value);
-  return _babel_runtime_corejs2_core_js_number_parse_float__WEBPACK_IMPORTED_MODULE_0___default()(Math.round(value * 100) / 100).toFixed(2);
+function processValue(value) {
+  if (typeof value === 'number') {
+    return _babel_runtime_corejs2_core_js_number_parse_float__WEBPACK_IMPORTED_MODULE_0___default()(Math.round(value * 100) / 100).toFixed(2);
+  }
+
+  return value;
 }
 
 var CardNumber = function CardNumber(props) {
@@ -164,7 +170,7 @@ var CardNumber = function CardNumber(props) {
     color: "primary",
     gutterBottom: true,
     variant: "display2"
-  }, showTwoDecimalUtil(props.value)))));
+  }, processValue(props.value)))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__["withStyles"])(styles)(CardNumber));
@@ -269,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var logoUrl = 'static/images/logo.svg';
+var logoUrl = '../static/images/logo.svg';
 
 var styles = function styles(theme) {
   return {
@@ -320,7 +326,8 @@ var Header = function Header(props) {
     color: "inherit",
     noWrap: true
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/",
+    href: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: classes.link
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     style: {
@@ -331,7 +338,7 @@ var Header = function Header(props) {
     alt: ""
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: classes.tagline
-  }, "Woodify"))))))))));
+  }, "Woodify")))))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_7__["withStyles"])(styles)(Header));
@@ -355,7 +362,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var backgroundImgUrl = 'static/images/background_trees.jpg';
+var backgroundImgUrl = '../static/images/background_trees.jpg';
 
 var styles = function styles(theme) {
   return {
@@ -430,13 +437,14 @@ var ListItem = function ListItem(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3___default.a, {
     className: classes.paper
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    as: "/p/".concat(props.parcel.id),
-    href: "/parcel?title=".concat(props.parcel.title),
+    as: "/parcel/".concat(props.parcel.id),
+    href: "/parcel?id=".concat(props.parcel.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: classes.link
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
     variant: "subtitle1",
     color: "primary"
-  }, props.parcel.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, props.parcel.title))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
     variant: "subtitle1",
     color: "textSecondary"
   }, props.parcel.date)));
@@ -1687,7 +1695,7 @@ function getParcels() {
     date: '20110510',
     cadastralNb: 'A834',
     type: 'Bois',
-    seller: 'FORGET-CRELOT',
+    seller: 'Seller 1',
     area: 21.4,
     price: 3581,
     notaryFees: 447.68,
@@ -1708,7 +1716,7 @@ function getParcels() {
     date: '20101103',
     cadastralNb: 'E834B7',
     type: 'Bois',
-    seller: 'DEBRAY Christiane',
+    seller: 'Seller 2',
     area: 538.3,
     price: 63000,
     notaryFees: 7875,
@@ -1737,7 +1745,7 @@ function getParcels() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\PF66FBd\Ben\woodify\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\PF66FBd\Ben\Woodify\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -1827,6 +1835,17 @@ module.exports = require("@material-ui/core/Typography");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/styles");
+
+/***/ }),
+
+/***/ "assert":
+/*!*************************!*\
+  !*** external "assert" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("assert");
 
 /***/ }),
 

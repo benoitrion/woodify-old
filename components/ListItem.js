@@ -17,8 +17,10 @@ const ListItem = (props) => {
   return (
     <Grid item key={props.parcel.id} xs={12} md={12}>
       <Paper className={classes.paper}>
-        <Link as={`/p/${props.parcel.id}`} href={`/parcel?title=${props.parcel.title}`} className={classes.link}>
-          <Typography variant="subtitle1" color="primary">{props.parcel.title}</Typography>
+        <Link as={`/parcel/${props.parcel.id}`} href={`/parcel?id=${props.parcel.id}`}>
+          <a className={classes.link}>
+            <Typography variant="subtitle1" color="primary">{props.parcel.title}</Typography>
+          </a>
         </Link>
         <Typography variant="subtitle1" color="textSecondary">
           {props.parcel.date}

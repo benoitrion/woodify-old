@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import { withStyles } from '@material-ui/core/styles';
 
-const logoUrl = 'static/images/logo.svg';
+const logoUrl = '../static/images/logo.svg';
 
 const styles = theme => ({
   appBar: {
@@ -45,11 +45,13 @@ const Header = (props) => {
             <Grid item xs={12} className={classes.flex}>
               <div className={classes.inline}>
                 <Typography variant="h6" color="inherit" noWrap>
-                  <Link href='/' className={classes.link}>
-                    <React.Fragment>
-                      <img style={{"verticalAlign": "middle"}} width={35} src={logoUrl} alt="" />
-                      <span className={classes.tagline}>Woodify</span>
-                    </React.Fragment>
+                  <Link href='/'>
+                    <a className={classes.link}>
+                      <React.Fragment>
+                        <img style={{"verticalAlign": "middle"}} width={35} src={logoUrl} alt="" />
+                        <span className={classes.tagline}>Woodify</span>
+                      </React.Fragment>
+                    </a>
                   </Link>
                 </Typography>
               </div>

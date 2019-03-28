@@ -20,6 +20,7 @@ const styles = theme => ({
 
 const ParcelSellingDetails = (props) => {
   const { classes } = props;
+
   return (
     <React.Fragment>
       <Typography variant="h3" color="primary">{'Selling details'}</Typography>

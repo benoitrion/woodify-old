@@ -22,13 +22,13 @@ const Parcel = props => (
 
 Parcel.getInitialProps = async function (context) {
   const { id } = context.query
-  const filteredParcels = await getParcels().filter(p => p.id === id)
-  const parcel = filteredParcels[0];
 
-  console.log(`Fetched parcel: ${parcel.title}`)
+  const filteredParcels = getParcels().filter(p => p.id === id)
 
-  return { parcel }
-
+  if(filteredParcels.length !== 0) {
+    return {parcel : filteredParcels[0]};
+  }
+  return {};
 }
 
 export default withStyles(styles)(Parcel);

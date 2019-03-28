@@ -1,7 +1,7 @@
 import Header from './Header'
 import { withStyles } from '@material-ui/core/styles';
 
-const backgroundImgUrl = 'static/images/background_trees.jpg';
+const backgroundImgUrl = '../static/images/background_trees.jpg';
 
 const styles = theme => ({
   root: {

@@ -15,9 +15,11 @@ const styles = theme => ({
   }
 });
 
-function showTwoDecimalUtil(value) {
-  console.log(value)
-  return Number.parseFloat(Math.round(value * 100) / 100).toFixed(2);
+function processValue(value) {
+  if(typeof value === 'number') {
+    return Number.parseFloat(Math.round(value * 100) / 100).toFixed(2);
+  } 
+  return value;
 }
 
 const CardNumber = (props) => {
@@ -30,7 +32,7 @@ const CardNumber = (props) => {
             {props.headline}
           </Typography>
           <Typography style={{ textAlign: 'center' }} color='primary' gutterBottom variant="display2">
-            {showTwoDecimalUtil(props.value)}
+            { processValue(props.value) }
           </Typography>
         </div>
       </Paper>

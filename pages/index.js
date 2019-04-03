@@ -1,4 +1,5 @@
 import React from 'react';
+import MapContainer from '../components/MapContainer.js'
 import Layout from '../components/Layout.js'
 import ParcelList from '../components/ParcelList.js'
 import getParcels from '../parcel-data'
@@ -14,6 +15,7 @@ const Index = (props) => {
     <React.Fragment>
       <CssBaseline />
       <Layout >
+        <MapContainer parcels={props.parcels} />
         <GridCardNumber parcels={props.parcels} />
         <ParcelList parcels={props.parcels} />
       </Layout>

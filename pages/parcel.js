@@ -1,5 +1,6 @@
 import Layout from '../components/Layout.js'
 import getParcels from '../parcel-data'
+import MapContainer from '../components/MapContainer.js'
 import ParcelDetails from '../components/ParcelDetails'
 import ParcelSellingDetails from '../components/ParcelSellingDetails'
 import ParcelTasks from '../components/ParcelTasks'
@@ -13,6 +14,7 @@ const Parcel = props => (
   <React.Fragment>
     <CssBaseline />
     <Layout >
+      <MapContainer parcels={[props.parcel]} />
       <ParcelDetails parcel={props.parcel} />
       <ParcelSellingDetails parcel={props.parcel} />
       <ParcelTasks parcel={props.parcel} />

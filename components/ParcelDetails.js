@@ -17,7 +17,7 @@ const styles = theme => ({
 const ParcelDetails = (props) => {
   const { classes } = props;
   return (
-    <Grid justify="center">
+    <Grid container justify="center">
       <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
           <React.Fragment>
             <CardNumber headline={'Area'} value={props.parcel.area}></CardNumber>

@@ -25,7 +25,7 @@ function processValue(value) {
 const CardNumber = (props) => {
   const { classes } = props;
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={3}>
       <Paper className={classes.paper}>
         <div className={classes.box}>
           <Typography style={{ textTransform: 'uppercase' }} color='secondary' gutterBottom variant="subheading">

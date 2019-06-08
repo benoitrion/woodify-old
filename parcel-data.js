@@ -13,18 +13,35 @@ function getParcels() {
             notaryFees: 447.68,
             expenses: 4028.63,
             revenues: 0,
-            tasks: [
-                {
-                    id: "task1",
-                    date: '19-03-2019',
-                    description: 'Elagage'
-                },
-                {
-                    id: "task2",
-                    date: '20-03-2019',
-                    description: 'Debrousaillage'
-                }
-            ],
+            tasks: {
+                "Todo": [
+                    {
+                        title: 'Task 1',
+                        description:
+                            'Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.',
+                        date: '19-03-2019',
+                        color: 'success'
+                    }   
+                ],
+                "Doing": [
+                    {
+                        title: 'Travel checklist',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    }
+                ],
+                "Done": [
+                    {
+                        title: 'Task 2',
+                        description:
+                            'Nua vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.',
+                        date: '1-03-2019',
+                        color: 'success'
+                    }   
+                ],
+            },
             geojson: {
                 "type": "Feature",
                 "properties": {
@@ -90,18 +107,70 @@ function getParcels() {
             notaryFees: 7875,
             expenses: 95875,
             revenues: 0,
-            tasks: [
-                {
-                    id: "task3",
-                    date: '19-03-2019',
-                    description: 'Elagage'
-                },
-                {
-                    id: "task4",
-                    date: '20-03-2019',
-                    description: 'Debrousaillage'
-                }
-            ],
+            tasks: {
+                "Todo": [
+                    {
+                        title: 'Task 1',
+                        description:
+                            'Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.',
+                        date: '19-03-2019',
+                        color: 'success'
+                    },
+                    {
+                        title: 'Travel checklist3',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    },
+                    {
+                        title: 'Travel checklist4',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    },
+                    {
+                        title: 'Travel checklist5',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    } ,
+                    {
+                        title: 'Travel checklist6',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    } ,
+                    {
+                        title: 'Travel checklist7',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    }  
+                ],
+                "Doing": [
+                    {
+                        title: 'Travel checklist2',
+                        description:
+                            'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+                        date: '20-03-2019',
+                        color: 'success'
+                    }
+                ],
+                "Done": [
+                    {
+                        title: 'Task 2',
+                        description:
+                            'Nua vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.',
+                        date: '1-03-2019',
+                        color: 'success'
+                    }   
+                ],
+            },
             geojson: {
                 "type": "Feature",
                 "properties": {

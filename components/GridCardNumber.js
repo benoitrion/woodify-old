@@ -19,13 +19,15 @@ const GridCardNumber = (props) => {
   return (
     <Grid container justify="center">
       <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
-          {props.parcels.reduce((a, b) => (
-            <React.Fragment>
+        {props.parcels.reduce((a, b) => (
+          <React.Fragment>
+            <Grid item xs={12} md={4}>
               <CardNumber headline={'Area'} value={a.area + b.area}></CardNumber>
               <CardNumber headline={'Revenues'} value={a.revenues + b.revenues}></CardNumber>
               <CardNumber headline={'Expenses'} value={a.expenses + b.expenses}></CardNumber>
-            </React.Fragment>
-          ))}
+            </Grid>
+          </React.Fragment>
+        ))}
       </Grid>
     </Grid>
   );

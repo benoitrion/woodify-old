@@ -10,7 +10,7 @@ const styles = theme => ({
   },
   grid: {
     width: 700,
-    marginTop: 40,
+    marginTop: 20,
     [theme.breakpoints.down('sm')]: {
       width: 'calc(100% - 20px)'
     }
@@ -38,7 +38,6 @@ function Headline(props) {
 }
 
 function Row(props) {
-
   return (
     <React.Fragment>
       <Grid container item xs={12} spacing={24}>
@@ -63,16 +62,16 @@ function SellerCard(props) {
       <Grid container justify="center">
         <Grid spacing={24} alignItems="center" justify="center" container className={classes.grid}>
           <Grid item xs={12} md={12}>
-          <Paper className={classes.paper}>
-            <Grid container spacing={16}>
-              <Headline value={'Selling Details'}></Headline>
-              <Row title='Seller' value={props.parcel.seller}></Row>
-              <Row title='Price' value={props.parcel.price}></Row>
-              <Row title='Notary Fees' value={props.parcel.notaryFees}></Row>
-              <Row title='Date' value={props.parcel.date}></Row>
-            </Grid>
-          </Paper>
-        </Grid>
+            <Paper className={classes.paper}>
+              <Grid container spacing={16}>
+                <Headline value={'Selling Details'}></Headline>
+                <Row title='Seller' value={props.parcel.seller}></Row>
+                <Row title='Price' value={props.parcel.price}></Row>
+                <Row title='Notary Fees' value={props.parcel.notaryFees}></Row>
+                <Row title='Date' value={props.parcel.date}></Row>
+              </Grid>
+            </Paper>
+          </Grid>
         </Grid>
       </Grid>
 

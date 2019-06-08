@@ -3,9 +3,9 @@ import getParcels from '../parcel-data'
 import MapContainer from '../components/MapContainer.js'
 import ParcelDetails from '../components/ParcelDetails'
 import SellerCard from '../components/SellerCard'
-import ParcelTasks from '../components/ParcelTasks'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
+import Taskboard from '../components/Taskboard.js';
 
 const styles = ({
 });
@@ -17,7 +17,7 @@ const Parcel = props => (
       <MapContainer parcels={[props.parcel]} />
       <ParcelDetails parcel={props.parcel} />
       <SellerCard parcel={props.parcel} />
-      <ParcelTasks parcel={props.parcel} />
+      <Taskboard parcel={props.parcel} />
     </Layout>
   </React.Fragment>
 )

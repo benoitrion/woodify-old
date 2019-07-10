@@ -4,15 +4,19 @@ function getParcels() {
         {
             id: 'haut-courroi-A834',
             title: 'SAINT-VINCENT "Haut du Corroi" - A834',
-            date: '20110510',
             cadastralNb: 'A834',
             type: 'Bois',
-            seller: 'Seller 1',
             area: 21.4,
-            price: 3581,
-            notaryFees: 447.68,
             expenses: 4028.63,
             revenues: 0,
+            saleDetails: {
+                seller: 'Debray Chrisine',
+                price: 3581,
+                notary: 'Notaire Bechet',
+                notaryFees: 447.68,
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales pharetra quam sit amet efficitur.',
+                date: '20110510',
+            },
             tasks: {
                 "Todo": [
                     {
@@ -98,15 +102,20 @@ function getParcels() {
         {
             id: 'au-chenois-E834B7',
             title: 'SAINT-VINCENT "Au Chenois" - E834B7',
-            date: '20101103',
             cadastralNb: 'E834B7',
             type: 'Bois',
-            seller: 'Seller 2',
             area: 538.3,
             price: 63000,
-            notaryFees: 7875,
             expenses: 95875,
             revenues: 0,
+            saleDetails: {
+                seller: 'Seller 2',
+                price: 3581,
+                notary: 'Notary 2',
+                notaryFees: 875,
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales pharetra quam sit amet efficitur.',
+                date: '20101103',
+            },
             tasks: {
                 "Todo": [
                     {

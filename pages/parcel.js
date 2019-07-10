@@ -2,7 +2,8 @@ import Layout from "../components/Layout.js";
 import getParcels from "../parcel-data";
 import MapContainer from "../components/MapContainer.js";
 import ParcelDetails from "../components/ParcelDetails";
-import SellerCard from "../components/SaleCard";
+import SaleCard from "../components/SaleCard";
+import SaleCardFormDialog from "../components/SaleCardFormDialog";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles } from "@material-ui/core/styles";
 import Taskboard from "../components/Taskboard.js";
@@ -18,7 +19,8 @@ const Parcel = props => (
     <Layout>
       <MapContainer parcels={[props.parcel]} />
       <ParcelDetails parcel={props.parcel} />
-      <SellerCard details={props.parcel.saleDetails} />
+      <SaleCard details={props.parcel.saleDetails} />
+      <SaleCardFormDialog />
       <Taskboard parcel={props.parcel} />
     </Layout>
   </React.Fragment>

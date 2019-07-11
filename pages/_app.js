@@ -3,8 +3,10 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/utils/theme";
+import withReduxStore from "../src/lib/with-redux-store";
+import { Provider } from "react-redux";
 
-export default class Woodify extends App {
+class Woodify extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
@@ -41,16 +43,19 @@ export default class Woodify extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, reduxStore } = this.props;
     return (
       <Container>
         {this.renderHead()}
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...pageProps} />
+          <Provider store={reduxStore}>
+            <Component {...pageProps} />
+          </Provider>
         </ThemeProvider>
       </Container>
     );
   }
 }
+export default withReduxStore(Woodify);

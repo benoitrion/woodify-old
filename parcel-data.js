@@ -1,4 +1,3 @@
-
 function getParcels() {
     return [
         {

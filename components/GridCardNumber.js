@@ -27,17 +27,9 @@ const GridCardNumber = props => {
       >
         {props.parcels.reduce((a, b) => (
           <React.Fragment>
-            <Grid item xs={12} md={4}>
-              <CardNumber headline={"Area"} value={a.area + b.area} />
-              <CardNumber
-                headline={"Revenues"}
-                value={a.revenues + b.revenues}
-              />
-              <CardNumber
-                headline={"Expenses"}
-                value={a.expenses + b.expenses}
-              />
-            </Grid>
+            <CardNumber headline={"Area"} value={a.area + b.area} />
+            <CardNumber headline={"Revenues"} value={a.revenues + b.revenues} />
+            <CardNumber headline={"Expenses"} value={a.expenses + b.expenses} />
           </React.Fragment>
         ))}
       </Grid>

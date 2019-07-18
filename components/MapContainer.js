@@ -4,7 +4,6 @@ import Router from "next/router";
 
 import { defaultMapStyle, dataLayer } from "./map-style.js";
 import { fromJS } from "immutable";
-import { connect } from "react-redux";
 
 const MAPBOX_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
@@ -23,10 +22,10 @@ class MapContainer extends React.Component {
   };
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   const geoJson = this._buildGeoJson(this.props.parcels);
-    //   this._loadData(geoJson);
-    // }, 200);
+    setTimeout(() => {
+      const geoJson = this._buildGeoJson(this.props.parcels);
+      this._loadData(geoJson);
+    }, 200);
   }
 
   _loadData = data => {
@@ -123,8 +122,4 @@ class MapContainer extends React.Component {
     );
   }
 }
-const mapStateToProps = props => {
-  const { parcels } = props;
-  return { parcels };
-};
-export default connect(mapStateToProps)(MapContainer);
+export default MapContainer;

@@ -9,14 +9,14 @@ import { connect } from "react-redux";
 import { getParcelsFromStore } from "../src/store.js";
 const styles = {};
 
-const Index = () => {
+const Index = props => {
   return (
     <React.Fragment>
       <CssBaseline />
       <Layout>
-        <MapContainer />
-        <GridCardNumber />
-        <ParcelList />
+        <MapContainer parcels={props.parcels} />
+        <GridCardNumber parcels={props.parcels} />
+        <ParcelList parcels={props.parcels} />
       </Layout>
     </React.Fragment>
   );
@@ -29,8 +29,11 @@ Index.getInitialProps = function({ reduxStore }) {
   return {};
 };
 
-const mapDispatchToProps = { getParcelsFromStore };
+const mapStateToProps = props => {
+  const { parcels } = props;
+  return { parcels };
+};
 export default connect(
-  null,
-  mapDispatchToProps
+  mapStateToProps,
+  null
 )(withStyles(styles)(Index));

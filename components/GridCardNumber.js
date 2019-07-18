@@ -1,7 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import CardNumber from "../components/CardNumber.js";
-import { connect } from "react-redux";
 
 const styles = theme => ({
   root: {
@@ -45,8 +44,4 @@ const GridCardNumber = props => {
     </Grid>
   );
 };
-const mapStateToProps = props => {
-  const { parcels } = props;
-  return { parcels };
-};
-export default connect(mapStateToProps)(withStyles(styles)(GridCardNumber));
+export default withStyles(styles)(GridCardNumber);

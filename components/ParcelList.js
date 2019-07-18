@@ -1,7 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import ListItem from "../components/ListItem.js";
 import { withStyles } from "@material-ui/core/styles";
-import { connect } from "react-redux";
 
 const styles = theme => ({
   grid: {
@@ -34,8 +33,4 @@ const ParcelList = props => {
   );
 };
 
-const mapStateToProps = props => {
-  const { parcels } = props;
-  return { parcels };
-};
-export default connect(mapStateToProps)(withStyles(styles)(ParcelList));
+export default withStyles(styles)(ParcelList);

@@ -1,6 +1,15 @@
-node_modules
-yarn.lock
-.next
-package-lock.json
-.env
-update-commits.sh
+# common
+
+**/node_modules
+**/yarn.lock
+**/package-lock.json
+
+# frontend
+
+**/.next
+
+# backend
+
+
+
+

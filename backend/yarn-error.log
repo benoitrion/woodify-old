@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\benoi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bcryptjs cookie-parser dotenv graphql graphql-cli graphql-yoga jsonwebtoken nodemailer nodemon prosma prisma-binding
+
+PATH: 
+  C:\Users\benoi\Workspace\woodify\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\benoi\AppData\Roaming\npm;C:\Gradle\gradle-6.1\bin;C:\Program Files\Java\jdk1.8.0_241\bin;C:\Users\benoi\AppData\Local\Programs\Python\Python37;C:\Users\benoi\AppData\Local\Programs\Python\Python37\Scripts;
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/prosma: Not found
+      at Request.params.callback [as _callback] (C:\Users\benoi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66947:18)
+      at Request.self.callback (C:\Users\benoi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140665:22)
+      at Request.emit (events.js:223:5)
+      at Request.<anonymous> (C:\Users\benoi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141637:10)
+      at Request.emit (events.js:223:5)
+      at IncomingMessage.<anonymous> (C:\Users\benoi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141559:12)
+      at Object.onceWrapper (events.js:312:28)
+      at IncomingMessage.emit (events.js:228:7)
+      at endReadableNT (_stream_readable.js:1185:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:21)
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "start": "nodemon -e js, graphql -x node src/index.js",
+      "dev": "nodemon -e js, graphql -x node --inspect src/index.js",
+      "deploy": "prisma deploy --env-file variables.env"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

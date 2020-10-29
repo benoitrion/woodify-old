@@ -1,4 +1,4 @@
-import App, { Container } from "next/app";
+import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,16 +13,6 @@ class Woodify extends App {
     if (jssStyles) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
-  }
-
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
   }
 
   renderHead() {
@@ -45,7 +35,7 @@ class Woodify extends App {
   render() {
     const { Component, pageProps, reduxStore } = this.props;
     return (
-      <Container>
+      <div>
         {this.renderHead()}
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -54,7 +44,7 @@ class Woodify extends App {
             <Component {...pageProps} />
           </Provider>
         </ThemeProvider>
-      </Container>
+      </div>
     );
   }
 }

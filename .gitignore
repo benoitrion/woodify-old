@@ -2,5 +2,7 @@ node_modules
 yarn.lock
 .next
 package-lock.json
-.env
+.env.local
 update-commits.sh
+.vercel
+.idea

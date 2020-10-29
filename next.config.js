@@ -11,9 +11,9 @@ module.exports = {
         config.plugins = [
             ...config.plugins,
 
-            // Read the .env file
+            // Read the .env.local file
             new Dotenv({
-                path: path.join(__dirname, '.env'),
+                path: path.join(__dirname, '.env.local'),
                 systemvars: true
             })
         ]
